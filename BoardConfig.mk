@@ -70,8 +70,7 @@ BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
 BOARD_NO_CHARGER_LED := true
 
 # Lineage hardware
-BOARD_HARDWARE_CLASS += \
-$(VENDOR_PATH)/lineagehw
+BOARD_HARDWARE_CLASS := hardware/lineage/lineagehw
 
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true

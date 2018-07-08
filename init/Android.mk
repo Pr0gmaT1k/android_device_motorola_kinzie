@@ -5,7 +5,8 @@ include $(CLEAR_VARS)
 LOCAL_MODULE_TAGS := optional
 LOCAL_C_INCLUDES := \
     system/core/base/include \
-    system/core/init
+    system/core/init \
+    external/selinux/libselinux/include
 LOCAL_CPPFLAGS := -Wall -DANDROID_TARGET=\"$(TARGET_BOARD_PLATFORM)\"
 LOCAL_SRC_FILES := init_kinzie.cpp
 LOCAL_MODULE := libinit_kinzie

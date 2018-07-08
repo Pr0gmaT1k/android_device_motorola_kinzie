@@ -29,6 +29,7 @@
 
 #include <string.h>
 #include <stdlib.h>
+#include <stdio.h>
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
 
@@ -36,6 +37,10 @@
 #include "property_service.h"
 #include "log.h"
 #include "util.h"
+#include <android-base/logging.h>
+#include <android-base/properties.h>
+
+using android::init::property_set;
 
 static void setSsim(void);
 static void setMsim(void);

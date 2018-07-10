@@ -1,3 +1,3 @@
 # android_device_motorola_kinzie
 
-https://gist.githubusercontent.com/Pr0gmaT1k/e0cbd62dd44a6d7a6bb23ab2c3eb0d62/raw/af2d3584caf5285f40327ee54399a2f96cc54798/roomservice.xml
+https://gist.githubusercontent.com/Pr0gmaT1k/e0cbd62dd44a6d7a6bb23ab2c3eb0d62/raw/9fe84ffd56c058e267c71d479b6af8c8451bedd1/roomservice.xml

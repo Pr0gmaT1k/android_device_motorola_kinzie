@@ -31,6 +31,7 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53.a57
 TARGET_NO_BOOTLOADER := true
+TARGET_COMPILE_WITH_MSM_KERNEL := true
 
 # Audio
 BOARD_USES_ALSA_AUDIO := true
@@ -69,9 +70,9 @@ BOARD_CHARGER_ENABLE_SUSPEND := true
 BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
 BOARD_NO_CHARGER_LED := true
 
-# CMHW
+# Lineage hardware
 BOARD_USES_CYANOGEN_HARDWARE := true
-BOARD_HARDWARE_CLASS := hardware/cyanogen/cmhw
+BOARD_HARDWARE_CLASS := hardware/lineage/lineagehw
 
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
@@ -116,10 +117,23 @@ SF_VSYNC_EVENT_PHASE_OFFSET_NS := 6000000
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 
 # Kernel
+#BOARD_KERNEL_BASE := 0x00000000
+#BOARD_KERNEL_PAGESIZE :=  4096
+#BOARD_KERNEL_TAGS_OFFSET := 0x00000100
+#BOARD_RAMDISK_OFFSET     := 0x01000000
+
+#TARGET_KERNEL_SOURCE := kernel/motorola/msm8992
+#TARGET_KERNEL_CONFIG := kinzie_defconfig
+#TARGET_KERNEL_ARCH := arm64
+#BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 boot_cpus=0-5
+#BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
+
+#TARGET_USES_64_BIT_BINDER := true
+
+
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := console=none androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 earlyprintk=msm_hsl_uart,0xf991e000 utags.blkdev=/dev/block/bootdevice/by-name/utags utags.backup=/dev/block/bootdevice/by-name/utagsBackup boot_cpus=0-5
 BOARD_KERNEL_PAGESIZE :=  4096
-BOARD_KERNEL_SEPARATED_DT := true
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_RAMDISK_OFFSET     := 0x01000000
 TARGET_KERNEL_ARCH := arm64
@@ -127,7 +141,7 @@ TARGET_KERNEL_CONFIG := kinzie_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/motorola/msm8992
-TARGET_USES_UNCOMPRESSED_KERNEL := true
+BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true

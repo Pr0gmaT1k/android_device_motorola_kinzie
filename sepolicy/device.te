@@ -1,1 +1,1 @@
-type adsp_serial_device, dev_type;
+type smartamp_device, dev_type;
